@@ -6,7 +6,8 @@ of strings, in particular the hard-coded texts in the theme.
 
 In Omeka, the translations are managed with `.po` files in the directory `application/languages/`
 for the core and in  the directory `languages/` of each enabled plugin. This
-plugin works the same, but you can add any strings yourself in the directory `languages/`
+plugin works the same, but you can add any strings yourself either in the
+directory `languages/` of the current theme, either in the directory `languages/`
 of this plugin, so they will be translated in Omeka.
 
 The translations themselves can be created with a tool like [poedit], or [lokalize],
@@ -24,10 +25,11 @@ Then install it like any other Omeka plugin in the plugins panel.
 Usage
 -----
 
-Simply update the translations files in the directory `languages/` of the
-plugin: the main one `template.pot` and each translation like `fr.po` and `fr.mo`.
-You can add any language, but respect the names of the files (see `application/languages/`)
-and copy the two files `.po` and `.mo` for each language.
+Simply update the translations files either in the directory `languages/` of the
+current theme, either in the directory `languages/` of the plugin: the main one
+`template.pot` and each translation like `fr.po` and `fr.mo`. You can add any
+language, but respect the names of the files (see `application/languages/`) and
+copy the two files `.po` and `.mo` for each language.
 
 In some cases, a cache may be used. In that case, restart the web server or
 simply remove all files starting with `omeka_i18n_cache` in the temp directory
@@ -77,18 +79,10 @@ This Agreement may be freely reproduced and published, provided it is not
 altered, and that no provisions are either added or removed herefrom.
 
 
-Contact
--------
-
-Current maintainers:
-
-* Daniel Berthereau (see [Daniel-KM] on GitHub)
-
-
 Copyright
 ---------
 
-* Copyright Daniel Berthereau, 2018
+* Copyright Daniel Berthereau, 2018-2019 (see [Daniel-KM] on GitHub)
 
 
 [Translations]: https://github.com/Daniel-KM/Omeka-plugin-Translations

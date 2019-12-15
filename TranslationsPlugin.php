@@ -8,7 +8,6 @@
  * @copyright Daniel Berthereau, 2018
  * @license https://www.cecill.info/licences/Licence_CeCILL_V2.1-en.html
  */
-
 class TranslationsPlugin extends Omeka_Plugin_AbstractPlugin
 {
     /**
@@ -24,5 +23,6 @@ class TranslationsPlugin extends Omeka_Plugin_AbstractPlugin
     public function hookInitialize()
     {
         add_translation_source(dirname(__FILE__) . '/languages');
+        add_translation_source(dirname(dirname(dirname(__FILE__))) . '/themes/' . get_option('public_theme') . '/languages');
     }
 }
