@@ -13,6 +13,9 @@ of this plugin, so they will be translated in Omeka.
 The translations themselves can be created with a tool like [poedit], or [lokalize],
 or any other compliant software or online service.
 
+This module has been integrated in the module [Multilanguage], so it can be
+removed if you use it.
+
 
 Installation
 ------------
@@ -86,6 +89,7 @@ Copyright
 
 [Translations]: https://github.com/Daniel-KM/Omeka-plugin-Translations
 [Omeka]: https://omeka.org/classic
+[Multilanguage]: https://github.com/patrickmj/Multilanguage
 [poedit]: https://poedit.net
 [lokalize]: https://www.kde.org/applications/development/lokalize
 [plugin issues]: https://github.com/Daniel-KM/Omeka-plugin-Translations/issues
