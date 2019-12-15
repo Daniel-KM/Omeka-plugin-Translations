@@ -31,14 +31,13 @@ current theme, either in the directory `languages/` of the plugin: the main one
 language, but respect the names of the files (see `application/languages/`) and
 copy the two files `.po` and `.mo` for each language.
 
-In some cases, a cache may be used. In that case, restart the web server or
-simply remove all files starting with `omeka_i18n_cache` in the temp directory
-of the web server, usually `/tmp`, or `/tmp/systemd-private-xxx/tmp`. Or wait
-some hours for the automatic refresh of the translations.
+Omeka uses a cache to store translations. To reset it, go the the config page of
+the plugin and check the box. It must be done each time a language is updated.
 
-Anyway, when the translations are updated, you should uninstall and reinstall
-the plugin in the config panel of Omeka. The translations will be automatically
-available.
+When the cache is not cleared, you shoud reset the cache manually. You can
+restart the web server or to remove all files starting with `omeka_i18n_cache`
+in the temp directory of the web server, usually `/tmp`, or `/tmp/systemd-private-xxx/tmp`.
+Or wait some hours for the automatic refresh of the translations.
 
 
 Warning

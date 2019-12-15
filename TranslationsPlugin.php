@@ -15,6 +15,8 @@ class TranslationsPlugin extends Omeka_Plugin_AbstractPlugin
      */
     protected $_hooks = array(
         'initialize',
+        'config_form',
+        'config',
     );
 
     /**
@@ -24,5 +26,30 @@ class TranslationsPlugin extends Omeka_Plugin_AbstractPlugin
     {
         add_translation_source(dirname(__FILE__) . '/languages');
         add_translation_source(dirname(dirname(dirname(__FILE__))) . '/themes/' . get_option('public_theme') . '/languages');
+    }
+
+    /**
+     * Shows plugin configuration page.
+     */
+    public function hookConfigForm($args)
+    {
+        $view = get_view();
+        echo $view->partial('plugins/translations-config-form.php');
+    }
+
+    /**
+     * Processes the configuration form.
+     *
+     * @param array Options set in the config form.
+     */
+    public function hookConfig($args)
+    {
+        $post = $args['post'];
+        if (empty($post['translations_reset'])) {
+            return;
+        }
+
+        $cache = Zend_Registry::get('Zend_Translate');
+        $cache::clearCache();
     }
 }
